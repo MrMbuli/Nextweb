@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NextWeb – Crafting Websites That Work</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter', sans-serif; color:#222; background:#f9f9f9; }
+    header { position:fixed; width:100%; top:0; z-index:100; }
+    nav { max-width:1200px; margin:auto; padding:1em; display:flex; justify-content:space-between; }
+    nav a { margin-left:1em; color:#222; text-decoration:none; font-weight:600; }
+    .hero {
+      position:relative; height:90vh; display:flex; align-items:center; justify-content:center;
+      background: url('hero-interactive.jpg') center/cover no-repeat;
+      animation: zoom 20s infinite alternate;
+    }
+    @keyframes zoom { from { transform: scale(1); } to { transform: scale(1.05); } }
+    .hero-text { text-align:center; color:#fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+    .hero-text h1 { font-size:3rem; margin-bottom:0.5em; }
+    .hero-text a { background:#007acc; padding:0.8em 2em; color:#fff; border-radius:4px; text-decoration:none; font-size:1.1em; }
+    section { max-width:1200px; margin:4em auto; padding:0 1em; }
+    .features, .portfolio { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2em; }
+    .feature-card, .portfolio-item {
+      position:relative; overflow:hidden; border-radius:8px; background:#fff;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1); cursor:pointer;
+      transition:transform .3s;
+    }
+    .feature-card:hover, .portfolio-item:hover { transform: translateY(-5px); }
+    .feature-card img, .portfolio-item img { width:100%; height:auto; display:block; }
+    .feature-card h3, .portfolio-item h3 { padding:1em; }
+    footer { text-align:center; padding:2em 1em; color:#777; font-size:0.9em; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div><strong>NextWeb</strong></div>
+    <div>
+      <a href="#services">Services</a>
+      <a href="#work">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Websites That Work</h1>
+    <a href="#services">Start Your Project</a>
+  </div>
+</div>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="features">
+    <!-- Example service -->
+    <div class="feature-card">
+      <img src="service1.jpg" alt="Business Websites">
+      <h3>Business Websites</h3>
+    </div>
+    <div class="feature-card">
+      <img src="service2.jpg" alt="E‑Commerce">
+      <h3>E‑Commerce Stores</h3>
+    </div>
+    <div class="feature-card">
+      <img src="service3.jpg" alt="SEO Optimization">
+      <h3>SEO & Optimization</h3>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Selected Work</h2>
+  <div class="portfolio">
+    <div class="portfolio-item"><img src="work1.jpg" alt="Project 1"><h3>Project One</h3></div>
+    <div class="portfolio-item"><img src="work2.jpg" alt="Project 2"><h3>Project Two</h3></div>
+    <div class="portfolio-item"><img src="work3.jpg" alt="Project 3"><h3>Project Three</h3></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Talk</h2>
+  <p>Email: <a href="mailto:owethuandrew10@gmail.com">owethuandrew10@gmail.com</a><br>
+     Phone: <a href="tel:+27635892769">063 589 2769</a></p>
+</section>
+
+<footer>
+  &copy; 2025 NextWeb • Owned by Owethu Mbuli
+</footer>
+
+<script>
+  // Optional: smooth scroll for navigation
+  document.querySelectorAll('nav a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
